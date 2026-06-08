@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fossa Limpa - Limpeza de Fossas</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+    color:#333;
+}
+
+header{
+    background:#2d6a4f;
+    color:white;
+    text-align:center;
+    padding:60px 20px;
+}
+
+header h1{
+    font-size:3rem;
+    margin-bottom:10px;
+}
+
+header p{
+    font-size:1.2rem;
+}
+
+section{
+    max-width:1200px;
+    margin:auto;
+    padding:60px 20px;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:30px;
+    color:#2d6a4f;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+    text-align:center;
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+.galeria{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+}
+
+.galeria img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.avaliacoes{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+}
+
+.avaliacao{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+.estrelas{
+    color:gold;
+    font-size:1.2rem;
+    margin-bottom:10px;
+}
+
+footer{
+    background:#1b4332;
+    color:white;
+    text-align:center;
+    padding:30px 20px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    background:#52b788;
+    color:white;
+    text-decoration:none;
+    padding:12px 25px;
+    border-radius:5px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#40916c;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Fossa Limpa</h1>
+    <p>Limpeza de Fossas, Caixas de Gordura e Esgotos</p>
+
+    <a href="https://wa.me/5541999999999" class="btn">
+        Solicitar Orçamento
+    </a>
+</header>
+
+<section>
+    <h2>Clientes que Já Atendemos</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Residências</h3>
+            <p>Mais de 500 atendimentos residenciais realizados.</p>
+        </div>
+
+        <div class="card">
+            <h3>Condomínios</h3>
+            <p>Serviços periódicos em condomínios e conjuntos habitacionais.</p>
+        </div>
+
+        <div class="card">
+            <h3>Empresas</h3>
+            <p>Atendimento para indústrias, mercados e comércios.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Modalidades de Tamanho para Fossas</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Pequena</h3>
+            <p>Até 3.000 litros</p>
+        </div>
+
+        <div class="card">
+            <h3>Média</h3>
+            <p>De 3.000 a 8.000 litros</p>
+        </div>
+
+        <div class="card">
+            <h3>Grande</h3>
+            <p>Acima de 8.000 litros</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Fotos do Trabalho</h2>
+
+    <div class="galeria">
+        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800" alt="">
+        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800" alt="">
+        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800" alt="">
+    </div>
+</section>
+
+<section>
+    <h2>Avaliações</h2>
+
+    <div class="avaliacoes">
+
+        <div class="avaliacao">
+            <div class="estrelas">★★★★★</div>
+            <p>
+                Atendimento rápido e serviço muito bem executado.
+            </p>
+            <strong>- João Martins</strong>
+        </div>
+
+        <div class="avaliacao">
+            <div class="estrelas">★★★★★</div>
+            <p>
+                Equipe chegou no horário e resolveu tudo sem sujeira.
+            </p>
+            <strong>- Maria Souza</strong>
+        </div>
+
+        <div class="avaliacao">
+            <div class="estrelas">★★★★★</div>
+            <p>
+                Melhor preço da região. Recomendo.
+            </p>
+            <strong>- Carlos Silva</strong>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <h3>Fossa Limpa</h3>
+    <p>Atendimento 24 Horas</p>
+    <p>📞 (41) 99999-9999</p>
+    <p>📍 Campina Grande do Sul - PR</p>
+    <br>
+    <p>&copy; 2026 - Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>
