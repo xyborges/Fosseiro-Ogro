@@ -14,10 +14,14 @@
 }
 
 body{
-    background:#f5f5f5;
+    background:
+        linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
+        url('fossa.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     color:#333;
 }
-
 header{
     background:#2d6a4f;
     color:white;
@@ -89,7 +93,14 @@ h2{
     border-radius:10px;
     box-shadow:0 3px 10px rgba(0,0,0,0.1);
 }
-
+.foto-perfil{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid white;
+    margin-bottom:20px;
+}
 .estrelas{
     color:gold;
     font-size:1.2rem;
@@ -122,6 +133,7 @@ footer{
 <body>
 
 <header>
+    <img src="matheus.jpg" alt="Matheus" class="foto-perfil">
     <h1>Fossa Limpa</h1>
     <p>Limpeza de Fossas, Caixas de Gordura e Esgotos</p>
 
@@ -129,7 +141,21 @@ footer{
         Solicitar Orçamento
     </a>
 </header>
+<section>
+    <h2>Onde Estamos</h2>
 
+    <div class="card">
+        <img src="casa.jpeg" alt="Nossa localização" style="width:100%;max-width:800px;border-radius:10px;">
+        <br><br>
+
+        <h3>Endereço</h3>
+        <p>
+            Rua Vinte e Cinco de Março, nº 710<br>
+            Quatro Barras - PR<br>
+            Região Metropolitana de Curitiba
+        </p>
+    </div>
+</section>
 <section>
     <h2>Clientes que Já Atendemos</h2>
 
