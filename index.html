@@ -1,153 +1,260 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fossa Limpa - Limpeza de Fossas</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fossa Limpa - O PIOR SITE DA INTERNET</title>
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Comic Sans MS", "Impact", sans-serif;
+        }
 
-body{
-    background:
-        linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
-        url('fossa.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    color:#333;
-}
-header{
-    background:#2d6a4f;
-    color:white;
-    text-align:center;
-    padding:60px 20px;
-}
+        body {
+            background: #00ff00; 
+            color: #ff00ff; 
+            line-height: 1.2;
+        }
 
-header h1{
-    font-size:3rem;
-    margin-bottom:10px;
-}
+        /* --- Header Totalmente Brega --- */
+        header {
+            background: #6600cc; 
+            border-bottom: 15px dashed #ffff00; 
+            padding: 50px 10px;
+            text-align: center;
+        }
 
-header p{
-    font-size:1.2rem;
-}
+        .foto-perfil {
+            width: 120px; 
+            height: 90px;  
+            border-radius: 0%; 
+            object-fit: cover;
+            border: 8px solid #ff0000; 
+            margin-bottom: 5px;
+        }
 
-section{
-    max-width:1200px;
-    margin:auto;
-    padding:60px 20px;
-}
+        header h1 {
+            color: #ff3300; 
+            font-size: 4rem;
+            text-transform: uppercase;
+            text-shadow: 5px 5px 0px #00ffff, -5px -5px 0px #000;
+        }
 
-h2{
-    text-align:center;
-    margin-bottom:30px;
-    color:#2d6a4f;
-}
+        header p {
+            font-size: 1.8rem;
+            color: #00ffff;
+            background: #000;
+            display: inline-block;
+            padding: 5px;
+        }
 
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
+        /* --- Seção de Litros (Nova e Ultra Brega) --- */
+        .secao-litros {
+            background: #ff0000 !important; 
+            border: 12px ridge #00ffff !important;
+            text-align: center;
+            padding: 30px 10px;
+            margin: 15px 0;
+        }
 
-.card{
-    background:white;
-    padding:25px;
-    border-radius:10px;
-    box-shadow:0 3px 10px rgba(0,0,0,0.1);
-    text-align:center;
-}
+        .formulario-litros {
+            font-size: 2.2rem;
+            color: #0000ff; 
+            font-weight: bold;
+            text-transform: uppercase;
+        }
 
-.card h3{
-    margin-bottom:10px;
-}
+        .campo-litros {
+            font-size: 2rem;
+            width: 180px;
+            padding: 5px;
+            border: 5px solid #ffff00;
+            background: #000;
+            color: #00ff00;
+            text-align: center;
+            font-family: "Impact", sans-serif;
+        }
 
-.galeria{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:20px;
-}
+        .btn-ok {
+            font-size: 2.2rem;
+            padding: 5px 25px;
+            background: #ff00ff;
+            color: #ffff00;
+            border: 6px outset #ffffff;
+            cursor: pointer;
+            font-weight: bold;
+            text-shadow: 2px 2px #000;
+        }
 
-.galeria img{
-    width:100%;
-    height:250px;
-    object-fit:cover;
-    border-radius:10px;
-}
+        .btn-ok:active {
+            border-style: inset;
+            background: #990099;
+        }
 
-.avaliacoes{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:20px;
-}
+        /* --- Seções Sem Harmonia --- */
+        section {
+            width: 100%;
+            margin: 10px 0;
+            padding: 40px 10px;
+            background: #ffcc00; 
+            border: 10px solid #ff00ff;
+        }
 
-.avaliacao{
-    background:white;
-    padding:20px;
-    border-radius:10px;
-    box-shadow:0 3px 10px rgba(0,0,0,0.1);
-}
-.foto-perfil{
-    width:180px;
-    height:180px;
-    border-radius:50%;
-    object-fit:cover;
-    border:5px solid white;
-    margin-bottom:20px;
-}
-.estrelas{
-    color:gold;
-    font-size:1.2rem;
-    margin-bottom:10px;
-}
+        section:nth-of-type(even) {
+            background: #ff0055;
+            border-color: #00ffcc;
+        }
 
-footer{
-    background:#1b4332;
-    color:white;
-    text-align:center;
-    padding:30px 20px;
-}
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #0000ff; 
+            font-size: 3rem;
+            text-decoration: line-through;
+        }
 
-.btn{
-    display:inline-block;
-    margin-top:20px;
-    background:#52b788;
-    color:white;
-    text-decoration:none;
-    padding:12px 25px;
-    border-radius:5px;
-    transition:0.3s;
-}
+        /* --- Cards e Estrutura --- */
+        .cards {
+            display: flex;
+            flex-direction: column; 
+            gap: 30px;
+        }
 
-.btn:hover{
-    background:#40916c;
-}
-</style>
+        .card, .avaliacao {
+            background: #000000;
+            color: #00ff00; 
+            border: 5px ridge #ff0000;
+            padding: 30px;
+            text-align: center;
+            transform: rotate(-1deg); 
+        }
+
+        .card h3 {
+            color: #ff00ff;
+            font-size: 2rem;
+        }
+
+        /* --- Foto de Localização Reduzida --- */
+        .img-localizacao {
+            width: 60% !important; 
+            border: 5px solid #ff00ff;
+            margin-bottom: 20px;
+        }
+
+        /* --- Seção Modalidades --- */
+        .modalidades-container {
+            display: block; 
+        }
+
+        .imagem-servico img {
+            width: 60%; 
+            margin: 0 auto;
+            border: 10px solid #ff9900;
+        }
+
+        /* --- Galeria de Fotos Reduzida --- */
+        .galeria img {
+            width: 60%; 
+            height: auto;
+            border: 6px dotted #000;
+            margin: 0 auto 15px auto;
+            display: block;
+        }
+
+        /* --- Avaliações --- */
+        .avaliacoes {
+            display: block;
+        }
+
+        .foto-cliente {
+            width: 154px; 
+            height: 154px; 
+            border: 8px solid #ffff00; 
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto 15px;
+        }
+
+        .estrelas {
+            color: #ff0000; 
+            font-size: 2rem;
+            background: #fff;
+            display: inline-block;
+            padding: 0 10px;
+        }
+
+        /* --- Seção de Despedida Reduzida --- */
+        .despedida-container {
+            text-align: center;
+            background: #440044 !important;
+            border: 12px double #ffff00 !important;
+        }
+
+        .img-despedida {
+            width: 60%; 
+            height: auto;
+            border: 8px solid #ff00ff;
+            box-shadow: 0 0 50px #ff0000;
+            margin-top: 20px;
+        }
+
+        .texto-despedida {
+            font-size: 2.5rem;
+            color: #ffff00;
+            font-weight: bold;
+            font-style: italic;
+            text-shadow: 2px 2px #ff0000;
+            margin-bottom: 15px;
+        }
+
+        /* --- Mapa --- */
+        .mapa-container {
+            background: red;
+            padding: 5px;
+        }
+
+        .mapa-container iframe {
+            width: 100%;
+            height: 250px;
+            filter: invert(1); 
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: #0000ff;
+            color: #33ff00;
+            text-align: center;
+            padding: 50px 10px;
+            font-size: 1.5rem;
+            border-top: 20px solid #ff0055;
+        }
+    </style>
 </head>
 <body>
 
 <header>
     <img src="matheus.jpg" alt="Matheus" class="foto-perfil">
-    <h1>Fossa Limpa</h1>
-    <p>Limpeza de Fossas, Caixas de Gordura e Esgotos</p>
-
-    <a href="https://wa.me/5541999999999" class="btn">
-        Solicitar Orçamento
-    </a>
+    <h1>Fossa Suja</h1>
+    <p>Sujeira de Fossas, Caixas de Gordura e Esgotos</p>
 </header>
+
+<section class="secao-litros">
+    <form class="formulario-litros" id="formFossa">
+        Quero 
+        <input type="number" id="quantidadeLitros" class="campo-litros" placeholder="0000" required> 
+        LITROS PARA ENCHER MINHA FOSSA! 
+        <button type="submit" class="btn-ok">OK</button>
+    </form>
+</section>
+
 <section>
     <h2>Onde Estamos</h2>
-
     <div class="card">
-        <img src="casa.jpeg" alt="Nossa localização" style="width:100%;max-width:800px;border-radius:10px;">
-        <br><br>
-
+        <img src="casa.jpeg" alt="Nossa localização" class="img-localizacao">
         <h3>Endereço</h3>
         <p>
             Rua Vinte e Cinco de Março, nº 710<br>
@@ -156,20 +263,18 @@ footer{
         </p>
     </div>
 </section>
+
 <section>
     <h2>Clientes que Já Atendemos</h2>
-
     <div class="cards">
         <div class="card">
             <h3>Residências</h3>
             <p>Mais de 500 atendimentos residenciais realizados.</p>
         </div>
-
         <div class="card">
             <h3>Condomínios</h3>
             <p>Serviços periódicos em condomínios e conjuntos habitacionais.</p>
         </div>
-
         <div class="card">
             <h3>Empresas</h3>
             <p>Atendimento para indústrias, mercados e comércios.</p>
@@ -179,75 +284,101 @@ footer{
 
 <section>
     <h2>Modalidades de Tamanho para Fossas</h2>
-
-    <div class="cards">
-        <div class="card">
-            <h3>Pequena</h3>
-            <p>Até 3.000 litros</p>
+    <div class="modalidades-container">
+        <div class="imagem-servico">
+            <img src="trabalhando.jpg" alt="Serviço de enchimento de fossa">
         </div>
-
-        <div class="card">
-            <h3>Média</h3>
-            <p>De 3.000 a 8.000 litros</p>
-        </div>
-
-        <div class="card">
-            <h3>Grande</h3>
-            <p>Acima de 8.000 litros</p>
+        <div class="cards">
+            <div class="card">
+                <h3>Pequena</h3>
+                <p>Até 3.000 litros</p>
+            </div>
+            <div class="card">
+                <h3>Média</h3>
+                <p>De 3.000 a 8.000 litros</p>
+            </div>
+            <div class="card">
+                <h3>Grande</h3>
+                <p>Acima de 8.000 litros</p>
+            </div>
         </div>
     </div>
 </section>
 
 <section>
     <h2>Fotos do Trabalho</h2>
-
     <div class="galeria">
-        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800" alt="">
-        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800" alt="">
-        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800" alt="">
+        <img src="nadandofossa1.png" alt="Foto do trabalho 1">
+        <img src="imagembanheiro2.png" alt="Foto do trabalho 2">
+        <img src="imagemenchendo3.png" alt="Foto do trabalho 3">
     </div>
 </section>
 
 <section>
     <h2>Avaliações</h2>
-
     <div class="avaliacoes">
-
         <div class="avaliacao">
+            <img src="cliente1.jpg" class="foto-cliente" alt="Cliente João">
             <div class="estrelas">★★★★★</div>
-            <p>
-                Atendimento rápido e serviço muito bem executado.
-            </p>
-            <strong>- João Martins</strong>
+            <p>Atendimento rápido, encheu a minha fossa certinho.</p>
+            <strong>- João Borges</strong>
         </div>
-
         <div class="avaliacao">
-            <div class="estrelas">★★★★★</div>
-            <p>
-                Equipe chegou no horário e resolveu tudo sem sujeira.
-            </p>
-            <strong>- Maria Souza</strong>
+            <img src="cliente2.jpg" class="foto-cliente" alt="Cliente Vinicius">
+            <div class="estrelas">★★★★</div>
+            <p>O atendente não preencheu totalmente com excreções a fossa, mas foi rápido...</p>
+            <strong>- Vinicius Lara</strong>
         </div>
-
         <div class="avaliacao">
+            <img src="cliente3.jpg" class="foto-cliente" alt="Cliente Diego">
             <div class="estrelas">★★★★★</div>
-            <p>
-                Melhor preço da região. Recomendo.
-            </p>
-            <strong>- Carlos Silva</strong>
+            <p>Melhor preço da região. Encheu rapidinho, furico quente.</p>
+            <strong>- Diego</strong>
         </div>
-
     </div>
 </section>
 
+<section id="localizacao">
+    <h2>Onde Realizamos os Serviços</h2>
+    <div class="mapa-container">
+        <p style="text-align:center; margin-bottom:20px; background: yellow; color: black;">
+            Matriz da maior empresa especializada em enchimento profissional de fossas da região.
+        </p>
+        <iframe src="https://www.google.com/maps?q=-25.3699623,-49.0827043&z=18&output=embed" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+</section>
+
+<section class="despedida-container">
+    <p class="texto-despedida">OBRIGADO PELA PREFERÊNCIA! VOLTE SEMPRE!</p>
+    <img src="fossa.png" alt="Despedida Fossa" class="img-despedida">
+</section>
+
 <footer>
-    <h3>Fossa Limpa</h3>
-    <p>Atendimento 24 Horas</p>
-    <p>📞 (41) 99999-9999</p>
+    <h3>Fossa Suja LTDA ME</h3>
+    <p>Atendimento 24 Horas sem parar</p>
+    <p>📞 (41) 9949-2511</p>
     <p>📍 Campina Grande do Sul - PR</p>
     <br>
-    <p>&copy; 2026 - Todos os direitos reservados.</p>
+    <p>© 2026 - Nenhum direito reservado, cópia à vontade.</p>
 </footer>
+
+<script>
+    document.getElementById('formFossa').addEventListener('submit', function(event) {
+        event.preventDefault(); // Impede a página de recarregar
+        
+        // Pega o valor digitado pelo usuário
+        var litros = document.getElementById('quantidadeLitros').value;
+        
+        // Texto brega codificado para a URL
+        var textoMensagem = encodeURIComponent("Quero " + litros + " KGS DE BOSTA PARA MINHA FOSSA!");
+        
+        // Link final da API do WhatsApp
+        var linkWhatsapp = "https://wa.me/554199492511?text=" + textoMensagem;
+        
+        // Abre em uma nova aba
+        window.open(linkWhatsapp, '_blank');
+    });
+</script>
 
 </body>
 </html>
